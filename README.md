@@ -1,1 +1,2 @@
 "# COIN" 
+# Token-Template
