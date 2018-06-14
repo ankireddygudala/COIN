@@ -1,0 +1,109 @@
+<!doctype html>
+        <html class="no-js" lang="">
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+            <title>AKT Wallet | signup</title>
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <link rel="stylesheet" href="./../css/vendor/bootstrap.min.css">
+
+            <link rel="manifest" href="./../site.webmanifest">
+            <link rel="apple-touch-icon" href="icon.png">
+            <!-- Place favicon.ico in the root directory -->
+
+            <link rel="stylesheet" href="./../css/normalize.css">
+            <link rel="stylesheet" href="./../css/main.css">
+
+
+
+        </head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div class="container">
+    <div class="title-bar">
+
+        <div class="row">
+            <div class="col-sm-9">
+                <img src="./../img/AKT%20Infotech.png" alt="AKT" width="80" height="70">
+            </div>
+            <!--<div class="col-sm-3 float-left ">-->
+                <!--<ul class="nav justify-content-end">-->
+                    <!--<li class="nav-item">-->
+                        <!--<button type="button" class="btn btn-primary"><a class="nav-link text-danger" href="/AKT%20Wallet/html/login.html">Login</a></button>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <div>
+
+    </div>
+</div>
+
+<div class="signup-form">
+    <div class="container reset_pwd">
+        <div class="jumbotron">
+            <form action="#">
+                <h2 align="center">Sign Up</h2>
+                <div class="form-group">
+                    <label for="email">Full name:</label>
+                    <input type="text" class="form-control" id="fullName" required placeholder="your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email" required placeholder="example@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" required placeholder="*********">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Confirm password:</label>
+                    <input type="password" class="form-control" id="cnfPwd" required placeholder="*********">
+                </div>
+                <div class="form-group">
+                    <label for="referralCode">Referral code:</label>
+                    <input type="text" class="form-control" id="referralCode" placeholder="optional">
+                </div>
+
+                <div align="center">
+                    <button type="reset" class="btn btn-secondary">clear</button>
+                    <button type="submit" class="btn btn-success signup-button" onclick="doSignUpAction()">Register</button>
+                </div>
+                <br>
+                <div align="center">
+                    All ready Signup Please  <a href="/AKT%20Wallet/html/login.html">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="js/vendor/jquery-3.2.1.min.js"></script>
+
+<script src="js/main.js"></script>
+
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>

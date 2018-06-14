@@ -1,0 +1,140 @@
+<% layout('user/userLayout') -%>
+<body style="background-image: url(assets/app/media/img/bg/bg-1.jpg)" class="m-page--boxed m-body--fixed m-header--static m-aside-left--enabled m-aside-left--offcanvas m-aside--offcanvas-default">
+    <!-- begin:: Page -->
+    <div class="m-grid m-grid--hor m-grid--root m-page">
+        <!-- begin::Header -->
+        <!-- end::Header -->
+        <!-- begin::Body -->
+        <div class="m-grid__item m-grid__item--fluid m-grid m-grid m-grid--hor m-container m-container--responsive m-container--xxl">
+            <div class="m-grid__item m-grid__item--fluid m-grid m-grid--hor-desktop m-grid--desktop m-body">
+                <div class="m-grid__item m-grid__item--fluid m-grid m-grid--desktop m-grid--ver-desktop m-body__content">
+                    <!-- BEGIN: Left Aside -->
+                    {{> _body_nav}}
+                    <!-- END: Left Aside -->
+                    <div class="m-grid__item m-grid__item--fluid m-wrapper">
+                        <!-- BEGIN: Subheader -->
+                        <div class="m-subheader ">
+                            <div class="d-flex align-items-center">
+                                <div class="mr-auto">
+                                    <h3 class="m-subheader__title m-subheader__title--separator">
+                                        Dashboard
+                                    </h3>
+                                    <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+                                        <li class="m-nav__item m-nav__item--home">
+                                            <a href="#" class="m-nav__link m-nav__link--icon">
+                                                <i class="m-nav__link-icon la la-home"></i>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__separator">
+                                            -
+                                        </li>
+
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <span class="m-nav__link-text">
+                                                    Leads
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: Subheader -->
+                        <div class="m-content">
+
+                            <!-- top level1 -->
+                            {{> lead-stat-boxes-i}} {{!-- loading stat boxes file --}}
+
+                            <!-- top levele1 end -->
+
+                        </div>
+                        <div class="m-portlet m-portlet--brand m-portlet--head-solid-bg">
+                            <div class="m-portlet__head">
+                                <div class="m-portlet__head-caption">
+                                    <div class="m-portlet__head-title">
+                                        <h3 class="m-portlet__head-text">
+                                            <?php echo $lang['LEADS'];?>
+                                        </h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="m-portlet__body">
+                                <!--begin: Search Form -->
+
+                                <!--end: Search Form -->
+                                <!--begin: Datatable -->
+                                <div id="status"></div>
+                                <table class="display" id="users" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <?php if($admin_user=='1') { ?>
+                                            <th>
+                                                <?php echo $lang['AFFILIATE'];?>
+                                            </th>
+                                            <th>
+                                                <?php echo $lang['NAME'];?>
+                                            </th>
+                                            <th>
+                                                <?php echo $lang['EMAIL'];?>
+                                            </th>
+                                            <th>
+                                                <?php echo $lang['PHONE'];?>
+                                            </th>
+                                            <th>
+                                                <?php echo $lang['MESSAGE'];?>
+                                            </th>
+                                            <th>
+                                                <?php echo $lang['NET_EARNINGS'];?>
+                                            </th>
+                                            <th>
+                                                <?php echo $lang['CONVERSION'];?>
+                                            </th>
+                                            <th>
+                                                <?php echo $lang['DATETIME'];?>
+                                            </th>
+                                            <th>
+                                                <?php echo $lang['ACTION'];?>
+                                            </th>
+                                            <?php }else{ ?>
+                                            <th>
+                                                <?php echo $lang['LEAD_ID'];?>
+                                            </th>
+                                            <th>
+                                                <?php echo $lang['NET_EARNINGS'];?>
+                                            </th>
+                                            <th>
+                                                <?php echo $lang['CONVERSION'];?>
+                                            </th>
+                                            <th>
+                                                <?php echo $lang['DATETIME'];?>
+                                            </th>
+                                            <?php } ?>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php if($admin_user=='1') { leads_table(); } else { my_leads_table($owner); }?>
+
+                                    </tbody>
+                                </table>
+                                <!--end: Datatable -->
+                            </div>
+                            <!-- teable end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- begin::Body -->
+            {{!--
+            <?php include('assets/comp/footer.php');?> --}}
+            <script>
+                $(document).ready(function () {
+                    $('#users').DataTable();
+                });
+      
+   <? php 
+   if (isset($_SESSION['action_deleted'])) { echo 'swal("Deleted", "This has been deleted as requested!", "success")'; }
+                unset($_SESSION['action_deleted']);
+   ?>
+            </script>

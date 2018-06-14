@@ -1,0 +1,278 @@
+<% layout('user/userLayout') -%>
+
+    <div class="m-grid__item m-grid__item--fluid m-grid m-grid m-grid--hor m-container m-container--responsive m-container--xxl">
+        <div class="m-grid__item m-grid__item--fluid m-grid m-grid--hor-desktop m-grid--desktop m-body">
+            <div class="m-grid__item m-body__nav">
+                <div class="m-stack m-stack--ver m-stack--desktop">
+                    <!-- begin::Horizontal Menu -->
+                    <div class="m-stack__item m-stack__item--middle m-stack__item--fluid">
+                        <button class="m-aside-header-menu-mobile-close  m-aside-header-menu-mobile-close--skin-light " id="m_aside_header_menu_mobile_close_btn">
+                            <i class="la la-close"></i>
+                        </button>
+                        <div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-light m-aside-header-menu-mobile--submenu-skin-light ">
+                            <ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
+                                <li class="m-menu__item" aria-haspopup="true">
+                                    <a href="dashboard" class="m-menu__link ">
+                                        <span class="m-menu__item-here"></span>
+                                        <span class="m-menu__link-text">
+                                            <%= i18n.__("DASHBOARD") %>
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- <li class="m-menu__item" aria-haspopup="true">
+                                    <a href="leads" class="m-menu__link">
+                                        <span class="m-menu__item-here"></span>
+                                        <span class="m-menu__link-text">
+                                            <%= i18n.__("LEADS")%>
+                                        </span>
+                                    </a>
+                                </li> -->
+                                <li class="m-menu__item" aria-haspopup="true">
+                                    <a href="transactions" class="m-menu__link">
+                                        <span class="m-menu__item-here"></span>
+                                        <span class="m-menu__link-text">
+                                            <%= i18n.__("TRANSACTIONS") %>
+                                        </span>
+                                        <!-- <i class="m-menu__hor-arrow la la-angle-down"></i>
+                                        <i class="m-menu__ver-arrow la la-angle-right"></i> -->
+                                    </a>
+                                </li>
+                                <li class="m-menu__item" aria-haspopup="true">
+                                    <a href="referral_links" class="m-menu__link">
+                                        <span class="m-menu__item-here"></span>
+                                        <span class="m-menu__link-text">
+                                            <%= i18n.__("REFERRAL_LINKS") %>
+                                        </span>
+                                        <!-- <i class="m-menu__hor-arrow la la-angle-down"></i>
+                                        <i class="m-menu__ver-arrow la la-angle-right"></i> -->
+                                    </a>
+                                </li>
+                                <li class="m-menu__item" aria-haspopup="true">
+                                    <a href="referral_traffic" class="m-menu__link">
+                                        <span class="m-menu__item-here"></span>
+                                        <span class="m-menu__link-text">
+                                            <%= i18n.__("REFERRAL_TRAFFIC") %>
+                                        </span>
+                                        <!-- <i class="m-menu__hor-arrow la la-angle-down"></i>
+                                        <i class="m-menu__ver-arrow la la-angle-right"></i> -->
+                                    </a>
+                                </li>
+                                <li class="m-menu__item  m-menu__item--active " aria-haspopup="true">
+                                    <a href="payouts" class="m-menu__link">
+                                        <span class="m-menu__item-here"></span>
+                                        <span class="m-menu__link-text">
+                                            <%= i18n.__("PAYOUTS") %>
+                                        </span>
+                                        <!-- <i class="m-menu__hor-arrow la la-angle-down"></i>
+                                        <i class="m-menu__ver-arrow la la-angle-right"></i> -->
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end::Horizontal Menu -->
+                </div>
+            </div>
+            <!--============================== insert submenu code here================-->
+
+            <div class="m-grid__item m-grid__item--fluid m-grid m-grid--desktop m-grid--ver-desktop m-body__content">
+                <!-- BEGIN: Left Aside -->
+                <!-- END: Left Aside -->
+                <div class="m-grid__item m-grid__item--fluid m-wrapper">
+                    <!-- BEGIN: Subheader -->
+                    <div class="m-subheader ">
+                        <div class="d-flex align-items-center">
+                            <div class="mr-auto">
+                                <!--<h3 class="m-subheader__title m-subheader__title&#45;&#45;separator">-->
+                                <!--Dashboard-->
+                                <!--</h3>-->
+                                <!--<ul class="m-subheader__breadcrumbs m-nav m-nav&#45;&#45;inline">-->
+                                <!--<li class="m-nav__item m-nav__item&#45;&#45;home">-->
+                                <!--<a href="#" class="m-nav__link m-nav__link&#45;&#45;icon">-->
+                                <!--<i class="m-nav__link-icon la la-home"></i>-->
+                                <!--</a>-->
+                                <!--</li>-->
+                                <!--<li class="m-nav__separator">-->
+                                <!-- - -->
+                                <!--</li>-->
+
+                                <!--<li class="m-nav__item">-->
+                                <!--<a href="" class="m-nav__link">-->
+                                <!--<span class="m-nav__link-text">-->
+                                <!--All Payout Requests-->
+                                <!--</span>-->
+                                <!--</a>-->
+                                <!--</li>-->
+                                <!--</ul>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Subheader -->
+                    <div class="m-content">
+                        <!-- top level1 -->
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="m-portlet m-portlet--brand m-portlet--head-solid-bg">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <span class="m-portlet__head-icon m--hide">
+                                                    <i class="la la-gear"></i>
+                                                </span>
+                                                <h3 class="m-portlet__head-text">
+                                                    <%= i18n.__("CREATE_PAYOUT_REQUEST") %>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--begin::Form-->
+                                    <form class="m-form m-form--fit m-form--label-align-right" method="post" action="payment-request">
+                                        <div class="m-portlet__body">
+
+                                            <div class="form-group m-form__group row">
+                                                <label for="textinput" class="col-3 col-form-label">
+                                                    <%= i18n.__("WALLET_ADDRESS") %>
+                                                </label>
+                                                <div></div>
+                                                <div class="col-9">
+                                                        <input class="form-control m-input" id="textinput" name="address" type="text" placeholder="" required="">
+                                                        <span class="help-block">
+                                                                <%= i18n.__("NOT_RESPONSIBLE") %>
+                                                        </span>
+                                                    </div>
+                                            </div>
+
+                                            <div class="form-group m-form__group row">
+                                                <label class="col-3 col-form-label" for="textinput">
+                                                    <%= i18n.__("EMAIL") %>
+                                                </label>
+
+                                                <div class="col-9">
+                                                    <input class="form-control m-input" id="textinput" name="ppe" type="text" placeholder="" required="">
+                                                   
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group m-form__group row">
+                                                <label class="col-3 col-form-label" for="textinput">
+                                                    <%= i18n.__("VERIFY_EMAIL") %>
+                                                </label>
+
+                                                <div class="col-9">
+                                                    <input class="form-control m-input" id="textinput" name="vppe" type="text" required="">
+                                                    <span class="help-block">
+                                                        <%= i18n.__("VERIFY_PAYMENT_EMAIL") %>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <!-- row2 -->
+                                            
+                                        
+                                           
+                                            <!-- row 3 end -->
+                                            <!-- row 4 -->
+                                      
+                                            <!-- row 4 end -->
+                                            <div class="row1">
+                                                <div class="form-group m-form__group row">
+                                                    <label for="textinput" class="col-3 col-form-label">
+                                                        <%= i18n.__("REQUESTED_AMOUNT") %>
+                                                    </label>
+                                                    <div></div>
+                                                    <div class="col-6">
+                                                        <input class="form-control m-input" id="textinput" name="a" type="text" placeholder="">
+                                                        <span class="help-block">*
+                                                            <%= i18n.__("MUST_MEET_MIN_PAYOUT") %> |
+                                                                <strong class="green">
+                                                                    <%= i18n.__("YOUR_BALANCE") +' : '+ user.balance + ' NBS' %></strong>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- row4 end -->
+                                        </div>
+
+                                        <div class="m-portlet__foot m-portlet__foot--fit">
+                                            <div class="m-form__actions">
+                                                <div class="row form-group m-form__group">
+                            
+                                                    <div class="col-12" align="center">
+                                                        <button type="submit" class="btn m-btn m-btn--gradient-from-warning m-btn--gradient-to-danger" name="singlebutton">
+                                                            <i class="fa fa-send"></i>
+                                                            <%= i18n.__("SUBMIT_REQUEST") %>
+                                                        </button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="m-portlet">
+                            <div class="m-portlet__body  m-portlet__body--no-padding">
+                                <div class="row m-row--no-padding m-row--col-separator-xl">
+                                    <div class="col-xl-12">
+                                        <div class="m-portlet m-portlet--brand m-portlet--head-solid-bg">
+                                            <div class="m-portlet__head">
+                                                <div class="m-portlet__head-caption">
+                                                    <div class="m-portlet__head-title">
+                                                        <h3 class="m-portlet__head-text">
+                                                            <%= i18n.__("MY_PAYOUT_REQUESTS") %>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="m-portlet__body">
+                                                <!--begin: Search Form -->
+                                                <div id="status"></div>
+                                                <div id="users_wrapper" class="dataTables_wrapper no-footer">
+                                                    <div class="dataTables_length" id="users_length">
+                                                        
+                                                    <table id="users" class="display dataTable no-footer" style="width: 100%;" role="grid" aria-describedby="users_info">
+                                                        <thead>
+                                                            <tr role="row">
+                                                                
+                                                                <th class="sorting" tabindex="0" aria-controls="users" rowspan="1" colspan="1" style="width: 250px;" aria-label="Payout Amount: activate to sort column ascending">
+                                                                    <%= i18n.__("PAYOUT_AMOUNT") %>
+                                                                </th>
+                                                                <!--<th class="sorting" tabindex="0" aria-controls="users" rowspan="1" colspan="1" style="width: 0px;" aria-label=": activate to sort column ascending"></th>-->
+                                                                <th class="sorting" tabindex="0" aria-controls="users" rowspan="1" colspan="1" style="width: 97px;" aria-label="Payout Status: activate to sort column ascending">
+                                                                    <%= i18n.__("PAYOUT_STATUS") %>
+                                                                </th>
+                                                                <th class="sorting" tabindex="0" aria-controls="users" rowspan="1" colspan="1" style="width: 80px;" aria-label="Date / Time: activate to sort column ascending">
+                                                                    <%= i18n.__("DATETIME") %>
+                                                                </th>
+                                                                <th class="sorting" tabindex="0" aria-controls="users" rowspan="1" colspan="1" style="width: 46px;" aria-label="Action: activate to sort column ascending">
+                                                                    <%= i18n.__("ACTION") %>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="odd">
+                                                                <td valign="top" colspan="6" class="dataTables_empty">
+                                                                    <%= i18n.__("NO_DATA_IN_TABLE") %>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    
+                                                </div>
+                                                <!--end: Datatable -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- table2 -->
+                </div>
+            </div>
+        </div>

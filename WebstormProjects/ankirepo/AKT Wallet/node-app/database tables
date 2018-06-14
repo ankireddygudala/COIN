@@ -1,0 +1,42 @@
+Database tables for affiliate:
+
+1. Table Name: user_type
+
+        variable name           data type
+        id                      int(3)      PK
+        user_type               varchar(25)
+
+
+2. Table Name: user
+
+        variable name           data type
+
+         id                      int(11)            PK
+         first_name              varchar(255)
+         last_name               varchar(255)
+         email                   varchar(255)
+         password                varchar(255)
+         referral_code           varchar(10)
+         user_type_id            int(3)             FK
+         auth_token              varchar(255)
+         wallet_address          varchar(255)
+         token_amount            decimal(50,6)
+         date_of_creation        timestamp current timestamp
+         date_of_modification    timestamp onupdate current timestamp
+
+         query:
+
+         CREATE TABLE users (
+           id int(11) NOT NULL AUTO_INCREMENT,
+           name varchar(255),
+           email VARCHAR(255),
+           password varchar(255),
+           user_type_id int(3),
+             referral_code varchar(10),
+            wallet_address varchar(255),
+             auth_token varchar(255),
+             token_amount decimal(50,6),
+           creation_date TIMESTAMP,
+             date_of_modification timestamp on update CURRENT_TIMESTAMP,
+           PRIMARY KEY (id)
+         ) AUTO_INCREMENT=1 ;

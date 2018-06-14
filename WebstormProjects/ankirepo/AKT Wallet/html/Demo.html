@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        ul{
+            list-style:none;
+        }
+        li{
+            display:block;
+            float:left;
+            margin-right:10px;
+            background-color:red;
+            padding:10px;
+            position: relative;
+        }
+        li.current{
+            background-color:#78c4dd;
+        }
+        li.current:after{
+            border-left: 10px solid transparent;
+            border-right: 11px solid transparent; content:"";
+            border-top: 13px solid #78c4dd;
+            position: absolute;
+            bottom: -13px;
+            width: 0px;
+            left: 50%;
+            margin-left: -10px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+       <a href="#"><li class="current">Home</li></a> 
+        <a href="#"><li>Home</li></a> 
+        
+    <a href="#"><li>Home</li></a> 
+        
+    <a href="#"><li>Home</li></a> 
+        
+</body>
+</html>

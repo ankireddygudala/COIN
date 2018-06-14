@@ -1,0 +1,202 @@
+<% layout('user/userLayout') -%>
+
+    <div class="m-grid__item m-grid__item--fluid m-grid m-grid m-grid--hor m-container m-container--responsive m-container--xxl">
+        <div class="m-grid__item m-grid__item--fluid m-grid m-grid--hor-desktop m-grid--desktop m-body">
+            <div class="m-grid__item m-body__nav">
+                <div class="m-stack m-stack--ver m-stack--desktop">
+                    <!-- begin::Horizontal Menu -->
+                    <div class="m-stack__item m-stack__item--middle m-stack__item--fluid">
+                        <button class="m-aside-header-menu-mobile-close  m-aside-header-menu-mobile-close--skin-light " id="m_aside_header_menu_mobile_close_btn">
+                            <i class="la la-close"></i>
+                        </button>
+                        <div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-light m-aside-header-menu-mobile--submenu-skin-light ">
+                            <ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
+                                <li class="m-menu__item " aria-haspopup="true">
+                                    <a href="dashboard" class="m-menu__link ">
+                                        <span class="m-menu__item-here"></span>
+                                        <span class="m-menu__link-text">
+                                            Dashboard
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- <li class="m-menu__item" aria-haspopup="true">
+                                    <a href="leads" class="m-menu__link">
+                                        <span class="m-menu__item-here"></span>
+                                        <span class="m-menu__link-text">
+                                            <%= i18n.__("LEADS")%>
+                                        </span>
+                                    </a>
+                                </li> -->
+                                <li class="m-menu__item" aria-haspopup="true">
+                                    <a href="transactions" class="m-menu__link">
+                                        <span class="m-menu__item-here"></span>
+                                        <span class="m-menu__link-text">
+                                            Transactions
+                                        </span>
+                                        <!-- <i class="m-menu__hor-arrow la la-angle-down"></i>
+                                        <i class="m-menu__ver-arrow la la-angle-right"></i> -->
+                                    </a>
+                                </li>
+                                <li class="m-menu__item" aria-haspopup="true">
+                                    <a href="referral_links" class="m-menu__link">
+                                        <span class="m-menu__item-here"></span>
+                                        <span class="m-menu__link-text">
+                                            Referral Links
+                                        </span>
+                                        <!-- <i class="m-menu__hor-arrow la la-angle-down"></i>
+                                        <i class="m-menu__ver-arrow la la-angle-right"></i> -->
+                                    </a>
+                                </li>
+                                <li class="m-menu__item" aria-haspopup="true">
+                                    <a href="referral_traffic" class="m-menu__link">
+                                        <span class="m-menu__item-here"></span>
+                                        <span class="m-menu__link-text">
+                                            Referral Traffic
+                                        </span>
+                                        <!-- <i class="m-menu__hor-arrow la la-angle-down"></i>
+                                        <i class="m-menu__ver-arrow la la-angle-right"></i> -->
+                                    </a>
+                                </li>
+                                <li class="m-menu__item" aria-haspopup="true">
+                                    <a href="payouts" class="m-menu__link">
+                                        <span class="m-menu__item-here"></span>
+                                        <span class="m-menu__link-text">
+                                            Payouts
+                                        </span>
+                                        <!-- <i class="m-menu__hor-arrow la la-angle-down"></i>
+                                        <i class="m-menu__ver-arrow la la-angle-right"></i> -->
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end::Horizontal Menu -->
+                </div>
+            </div>
+            <!--============================== insert submenu code here================-->
+
+            <div class="m-grid__item m-grid__item--fluid m-grid m-grid--desktop m-grid--ver-desktop m-body__content">
+                <div class="m-grid__item m-grid__item--fluid m-wrapper">
+                    <!-- BEGIN: Subheader -->
+                    <div class="m-subheader ">
+                        <div class="d-flex align-items-center">
+                            <div class="mr-auto">
+
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Subheader -->
+                    <div class="m-content">
+                        <!--Begin::Section-->
+                        <div class="m-portlet m-portlet--brand m-portlet--head-solid-bg">
+                            <div class="m-portlet__head">
+                                <div class="m-portlet__head-caption">
+                                    <div class="m-portlet__head-title">
+                                        <h3 class="m-portlet__head-text">
+                                            Affiliate Profile
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-portlet__body">
+                                    <form class="m-form m-form--fit m-form--label-align-right" method="post" action="update-frofile">
+                                            <div class="m-portlet__body">
+    
+                                                <div class="form-group m-form__group row">
+                                                    <label for="textinput" class="col-2 col-form-label" float="left">
+                                                        <%= i18n.__("FULL_NAME") %>
+                                                    </label>
+                                                    <div></div>
+                                                    <div class="col-4">
+                                                            <input class="form-control m-input" id="textinput" name="fullname" type="text" value="<%= user.fullname %>">
+                
+                                                        </div>
+                                                </div>
+    
+                                                <div class="form-group m-form__group row">
+                                                    <label class="col-2 col-form-label" for="textinput">
+                                                        <%= i18n.__("EMAIL") %>
+                                                    </label>
+    
+                                                    <div class="col-4">
+                                                        <input class="form-control m-input" id="textinput" name="email" type="text" value=<%= user.email %> disabled>
+                                                       
+                                                    </div>
+                                                </div>
+                                                <div class="form-group m-form__group row">
+                                                        <label class="col-2 col-form-label" for="textinput">
+                                                            <%= i18n.__("GENDER") %>
+                                                        </label>
+        
+                                                        <div class="col-4">
+                                                            <input class="form-control m-input" id="textinput" name="gender" type="text" value=<%= user.email %>>
+                                                           
+                                                        </div>
+                                                </div>
+                                                <div class="form-group m-form__group row">
+                                                        <label class="col-2 col-form-label" for="textinput">
+                                                            <%= i18n.__("ADDRESS 1") %>
+                                                        </label>
+        
+                                                        <div class="col-4">
+                                                            <input class="form-control m-input" id="textinput" name="address1" type="text" value=<%= user.email %> >
+                                                           
+                                                        </div>
+                                                </div>
+                                                <div class="form-group m-form__group row">
+                                                        <label class="col-2 col-form-label" for="textinput">
+                                                            <%= i18n.__("ADDRESS 2") %>
+                                                        </label>
+        
+                                                        <div class="col-4">
+                                                            <input class="form-control m-input" id="textinput" name="address2" type="text" value=<%= user.email %> >
+                                                           
+                                                        </div>
+                                                </div>
+                                                <div class="form-group m-form__group row">
+                                                        <label class="col-2 col-form-label" for="textinput">
+                                                            <%= i18n.__("MOBILE") %>
+                                                        </label>
+        
+                                                        <div class="col-4">
+                                                            <input class="form-control m-input" id="textinput" name="mobile" type="text" value=<%= user.email %> >
+                                                           
+                                                        </div>
+                                                </div>
+    
+                                            
+    
+                    
+                                                <!-- row4 end -->
+                                            </div>
+    
+                                            <div class="m-portlet__foot m-portlet__foot--fit">
+                                                <div class="m-form__actions">
+                                                    <div class="row form-group m-form__group">
+                                
+                                                        <div class="col-12" align="right">
+                                                            <button type="submit" class="btn m-btn m-btn--gradient-from-warning m-btn--gradient-to-danger" name="singlebutton">
+    
+                                                                <%= i18n.__("UPDATE") %>
+                                                            </button>
+    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                            </div>
+
+                        </div>
+                        <!--End::Section-->
+                        <!--Begin::Section-->
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

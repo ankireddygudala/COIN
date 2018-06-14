@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyWallet App</title>
+    <script>
+    </script>
+</head>
+
+<body>
+<h1 align="center">Welcome to My Wallet DApp</h1>
+<br><br>
+<hr>
+<div>
+    <div style="background: #ccc;min-height:100px;width:70%;margin: 30px 15%">
+        <h2 align="center" style="color: darkblue;font-size: 2.1em"> Create new account</h2>
+            Click here to create new account&nbsp;&nbsp; <button id="btn-create">create</button>
+        <span id="account-name" style="font-size: 25px;color: deeppink"></span>
+    </div>
+
+
+    <div style="background: #aaaaaa;min-height:100px;width:70%;margin: 30px 15%">
+        Check ether balance <button onclick="">get balance</button>
+        <span id="account-balance" style="color:deeppink;font-size: 30px">0.0</span>
+
+    </div>
+
+
+    <div style="background: #eee;min-height:100px;width:70%;margin: 30px 15%">
+        <h2>Transfer amount: </h2>
+        <form >
+            Send to <input type="text" width="300px">
+            Amount <input type="number">
+            <input type="button" onclick="transferEther()" value="Transfer">
+        </form>
+    </div>
+
+    <div style="background: #fafaaa;min-height:100px;width:70%;margin: 30px 15%">
+
+    </div>
+
+    <div style="background: #abcdef;min-height:100px;width:70%;margin: 30px 15%">
+
+    </div>
+</div>
+<!--<script src="operations.js"></script>-->
+<script src="js/app.js"></script>
+</body>
+</html>
